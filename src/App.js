@@ -53,8 +53,7 @@ class App extends React.Component {
     if(this.state.time === 0){
         clearInterval(useState.interval);
         console.log("Stoped");
-        this.setState({
-        });
+
     }
   }
     render(){
