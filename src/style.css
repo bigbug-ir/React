@@ -35,10 +35,11 @@ body{
     padding: 0.5rem;
     margin: 0.5rem;
     font-size: medium;
-    border-radius: 5px;
+    border-radius: 50%;
     opacity: 0.9;
-    height:4rem;
+    height:5rem;
     width: 5rem;
+    border:none
 }
 
 .btn:hover{
@@ -47,12 +48,12 @@ body{
     box-shadow: 0 0  20px;
 }
 .btn-primary{
-    background-color: orange;
+    background-color: green;
     color:aliceblue;
 }
 .btn-primary:hover{
 
-    box-shadow: 0 0  20px rgb(255, 178, 35);
+    box-shadow: 0 0  20px rgb(1, 159, 1);
 }
 .btn-danger{
     background-color: red;
@@ -61,4 +62,12 @@ body{
 .btn-danger:hover{
 
     box-shadow: 0 0  20px rgb(255, 48, 48);
+}
+.btn-gray{
+    background-color: gray;
+    color:aliceblue
+}
+.btn-gray:hover{
+    box-shadow: 0 0  20px rgb(164, 164, 164);
+
 }

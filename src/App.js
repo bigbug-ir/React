@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import './style.css';
 import Hello from './Hello';
-// import Timer from './Timer';
-import StopeWatch from './stopeWatch';
+import Timer from './Timer';
+// import StopeWatch from './stopWatch';
 
 class App extends React.Component {
   constructor(props) {
@@ -40,7 +40,7 @@ class App extends React.Component {
     }
   }
    
-  stopeTime=()=>{
+  stopTime=()=>{
     if(this.state.TF === true){
       clearInterval(useState.interval);
       console.log("Stoped");
@@ -48,6 +48,12 @@ class App extends React.Component {
         TF:false,
       });
     }
+  }
+  resetTime=()=>{
+    this.stopTime();
+    this.setState({
+      time:60,
+    });
   }
   componentDidUpdate(){
     if(this.state.time === 0){
@@ -60,8 +66,8 @@ class App extends React.Component {
       return(
         <div className="main">
           <Hello title={this.state.title}/>
-          {/* <Timer/> */}
-          <StopeWatch time={this.state.time} startTime={this.startTime} stopeTime ={this.stopeTime}  />
+          <Timer/>
+          {/* <StopWatch time={this.state.time} startTime={this.startTime} stopeTime ={this.stopeTime}  resetTime ={this.resetTime}/> */}
         </div>
       );
     }

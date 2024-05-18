@@ -1,7 +1,7 @@
 
 import React from 'react';
 
-class StopeWatch extends React.Component {
+class StopWatch extends React.Component {
     constructor(){
         super();
         this.state = {};
@@ -14,10 +14,11 @@ class StopeWatch extends React.Component {
             <div id='timeBtn'>
             <button className='btn btn-primary' onClick={this.props.startTime}>start</button>
             <button className='btn btn-danger' onClick={this.props.stopeTime}>stope</button>
+            <button className='btn btn-gray' onClick={this.props.resetTime}>reset</button>
             </div>
            
             </>
         )
     }
 }
-export default StopeWatch;
+export default StopWatch;
