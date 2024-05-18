@@ -25,7 +25,11 @@ class StopeWatch extends React.Component {
     }
     render(){
         return(
-            <h1 className='timer'>it is{this.state.time}</h1>
+            <>
+            <h1 className='timer'>it is {this.state.time}</h1>
+
+            <button className='btn' onClick={this.props.handelSetState}>change text</button>
+            </>
         )
     }
 }
