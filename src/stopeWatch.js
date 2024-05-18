@@ -1,34 +1,21 @@
 
 import React from 'react';
-var interval ;
+
 class StopeWatch extends React.Component {
     constructor(){
         super();
-        this.state={
-            time : 60,
-        }
+        this.state = {};
     }
 
-    componentDidMount(){
-        interval = setInterval(() =>{
-            let newTime = this.state.time-1;
-            this.setState({
-                time : newTime,
-            });
-        },1000)
-    }
-    componentDidUpdate(){
-        if (this.state.time === 0){
-            clearInterval(interval);
-            console.log("clear interval")
-        }
-    }
     render(){
         return(
             <>
-            <h1 className='timer'>it is {this.state.time}</h1>
-
-            <button className='btn' onClick={this.props.handelSetState}>change text</button>
+            <h1 className='timer'>{this.props.time}</h1>
+            <div id='timeBtn'>
+            <button className='btn btn-primary' onClick={this.props.startTime}>start</button>
+            <button className='btn btn-danger' onClick={this.props.stopeTime}>stope</button>
+            </div>
+           
             </>
         )
     }

@@ -25,3 +25,40 @@ body{
     background-color: black;
     color:orange;
 }
+#timeBtn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+.btn{
+    padding: 0.5rem;
+    margin: 0.5rem;
+    font-size: medium;
+    border-radius: 5px;
+    opacity: 0.9;
+    height:4rem;
+    width: 5rem;
+}
+
+.btn:hover{
+    opacity: 1;
+    cursor: pointer;
+    box-shadow: 0 0  20px;
+}
+.btn-primary{
+    background-color: orange;
+    color:aliceblue;
+}
+.btn-primary:hover{
+
+    box-shadow: 0 0  20px rgb(255, 178, 35);
+}
+.btn-danger{
+    background-color: red;
+    color:aliceblue
+}
+.btn-danger:hover{
+
+    box-shadow: 0 0  20px rgb(255, 48, 48);
+}
